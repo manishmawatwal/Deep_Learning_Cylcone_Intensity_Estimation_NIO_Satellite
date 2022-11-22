@@ -1,6 +1,8 @@
 # Cyclone
-This repository is a part of the research being conducted at IIT Indore, Department of Astronomy, Astrophysics and Space Enginerering
+This repository is a part of the research being conducted at IIT Indore, Department of Astronomy, Astrophysics and Space Enginerering.
+
 Under the guidance of Dr. Saurabh Das, in the RemoteWave Propagation Lab.
+
 Contact - saurabh.das@iiti.ac.in
 
 This repository is also a part of the research work titled - 

@@ -2,8 +2,6 @@ import os
 import shutil
 import random
 import csv
-import tensorflow as tf 
-import pandas as pd 
 import numpy as np
 
 root_dir = 'C:\\Users\\mawat\\Downloads\\multiclass_yearwise'
@@ -32,19 +30,27 @@ for i in range(len(years) - 2):
         writer = csv.writer(csvfile)
         for file_path, label in zip(train_file_list, train_label_list):
             writer.writerow([file_path, label])
+    csvfile.close()
     
     with open('val.csv', 'w', newline = '') as csvfile:
         writer = csv.writer(csvfile)
         for file_path, label in zip(val_file_list, val_label_list):
             writer.writerow([file_path, label])
+    csvfile.close()
 
     if not os.path.exists('train'):
         os.makedirs('train')
     if not os.path.exists('val'):
         os.makedirs('val')
 
-    for file_path in train_file_list:
-        shutil.copy(file_path, 'train')
+    for file_path, label in zip(train_file_list, train_label_list):
+        label_dir = os.path.join('train', label)
+        if not os.path.exists(label_dir):
+            os.makedirs(label_dir)
+        shutil.copy(file_path, label_dir)
     
-    for file_path in val_file_list:
-        shutil.copy(file_path, 'val')
+    for file_path, label in zip(val_file_list, val_label_list):
+        label_dir = os.path.join('val', label)
+        if not os.path.exists(label_dir):
+            os.makedirs(label_dir)
+        shutil.copy(file_path, label_dir)

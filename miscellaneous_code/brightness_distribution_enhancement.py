@@ -1,3 +1,5 @@
+import numpy as np
+from PIL import Image
 def apply_color_mapping(img_path):
     # Load grayscale image
     img = Image.open(img_path)

@@ -1,4 +1,5 @@
-# Cyclone
+# An End-to-End Deep Learning Framework for Cyclone Intensity Estimation in North Indian Ocean Region using Satellite Imagery
+
 This repository is a part of the research being conducted at IIT Indore, Department of Astronomy, Astrophysics and Space Enginerering.
 
 PI - Dr. Saurabh Das, RemoteWave Propagation Lab.
